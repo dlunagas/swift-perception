@@ -1,6 +1,6 @@
 #if canImport(SwiftUI)
   import SwiftUI
-
+  import Charts
   /// A view that perceives changes to perceptible models.
   ///
   /// Use this view to automatically subscribe to the changes of any fields in ``Perceptible()``
