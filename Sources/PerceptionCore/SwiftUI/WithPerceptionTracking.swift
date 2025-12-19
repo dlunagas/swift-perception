@@ -1,7 +1,7 @@
 #if canImport(SwiftUI)
   import SwiftUI
-  import Charts
-  /// A view that perceives changes to perceptible models.
+
+/// A view that perceives changes to perceptible models.
   ///
   /// Use this view to automatically subscribe to the changes of any fields in ``Perceptible()``
   /// models used in the view. Typically you will install this view at the root of your view like
@@ -208,15 +208,4 @@
     }
   }
 
-  #if canImport(Charts)
-    import Charts
-
-    @available(iOS 16, macOS 13, tvOS 16, watchOS 9, *)
-    extension WithPerceptionTracking: ChartContent where Content: ChartContent {
-      @_disfavoredOverload
-      public init(@ChartContentBuilder content: @escaping () -> Content) {
-        self.init(content: content())
-      }
-    }
-  #endif
 #endif
