@@ -297,6 +297,14 @@ extension VariableDeclSyntax {
 }
 
 extension PerceptibleMacro: MemberMacro {
+  public static func expansion(
+     of node: AttributeSyntax,
+     providingMembersOf declaration: some DeclGroupSyntax,
+     in context: some MacroExpansionContext
+   ) throws -> [DeclSyntax] {
+       return []
+   }
+  
   public static func expansion<
     Declaration: DeclGroupSyntax,
     Context: MacroExpansionContext
